@@ -1,0 +1,128 @@
+# reset all variables and hooks
+reset all
+unhook *
+
+######################################################################################
+# System specific settings
+######################################################################################
+# Only set dsn if the MTA is DSN-capable
+#set	dsn_notify = "delay,failure,success"
+set	dsn_notify = "delay,failure"
+set	dsn_return = "hdrs"
+set	editor = "vim -u ~/.mutt/vimrc"
+set	hostname = haryan.to
+set	mailcap_path = ~/.mutt/mailcap
+set	mbox_type = maildir
+#set	print_command = "muttprint"
+
+######################################################################################
+# User specific settings
+######################################################################################
+#alternates ^ronny@haryan\.to$
+
+#set realname = "Ronny Haryanto"
+
+# openpgp and s/mime
+#source ~/.mutt/gpg
+#source ~/.mutt/smime
+
+# mailboxes variables
+set	folder = ~/.mail
+set	mbox = =archive
+set	postponed = =drafts
+set	record = =sent
+set	spoolfile = ~/.maildir/
+
+source ~/.mutt/hooks
+
+mailboxes '!' 
+source ~/.mutt/lists
+mailboxes =spam
+mailboxes =virus
+
+######################################################################################
+# System/User independent settings
+######################################################################################
+#alternative_order text/enriched text/plain text/html
+alternative_order text/html text/enriched text/plain
+
+auto_view text/html text/encriched
+
+# TODO: complete the list from muttrc(5)
+set	abort_nosubject = ask-yes
+set	abort_unmodified = no
+set	allow_8bit
+unset	arrow_cursor
+set	ascii_chars
+unset	askcc
+#set	attribution = "On %{%d-%b-%Y}, %n wrote:"
+set	attribution = "On %d, %n wrote:"
+unset	autoedit
+set	auto_tag
+unset	beep
+unset	beep_new
+unset	bounce_delivered
+unset	confirmappend
+set	copy = yes
+set	delete = yes
+unset	edit_headers
+set	envelope_from
+set	fast_reply
+set	followup_to = yes
+set	forward_decode
+set	forward_format = "Fwd: %s"
+set	forward_quote
+set	history = 50
+set	include
+unset	mark_old
+set	mime_forward = ask-yes
+set	move = no
+set	pager_context = 1
+set	pager_format  = "%S %-25.25n %s"
+set	pager_index_lines = 11
+set	pager_stop
+unset	pipe_decode
+set	print = ask-no 
+unset	prompt_after
+set	quit = ask-yes
+set	quote_regexp = "^(([ \t]*[>|#:}])+|([ \t]*[ A-Za-z_0-9\.\-]*[^-]>))|^->"
+set	reply_regexp = "^(re([\\[0-9\\]+])*|aw):[ \t]*"
+set	reply_to = ask-yes
+unset	reverse_alias
+set	reverse_name
+unset	reverse_realname
+set	save_empty
+#unset	sig_dashes
+set	status_format = "-%r-%h: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
+set	status_on_top
+set	smart_wrap
+set	smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
+set	sort = threads
+set	sort_alias = alias
+set	sort_aux = date-received
+set	sort_browser = reverse-date
+set	sort_re
+set	timeout = 30
+set	to_chars = " +Tcf"
+set	use_from
+set	user_agent = yes
+set	weed
+unset	wait_key
+set	wrap_search
+
+# message headers
+ignore *
+unignore from: reply-to: date: to: cc: bcc: subject: x-mailer: \
+			x-originating-ip: newsgroups: x-sender-ip: user-agent:
+
+hdr_order from reply-to: x-originating-ip: x-sender-ip: x-mailer: \
+			user-agent: date: newsgroups: to: cc: bcc: \
+	        subject:
+
+source ~/.mutt/keybindings
+source ~/.mutt/colors
+
+set	alias_file = ~/.mutt/aliases
+source ~/.mutt/aliases
+
+# vim:ts=8 sw=4 ft=muttrc

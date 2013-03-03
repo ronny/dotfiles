@@ -1,0 +1,16 @@
+syntax: glob
+*.pyc
+*~
+.DS_Store
+*.o
+*.lo
+*.la
+.*.rej
+*.rej
+.*~
+*~
+.#*
+Thumbs.db
+*.mo
+
+# syntax: regex

@@ -1,0 +1,5 @@
+"\C-f": history-search-backward
+"\C-g": history-search-forward
+"\e[3~": delete-char
+"\e[5D": backward-word
+"\e[5C": forward-word
