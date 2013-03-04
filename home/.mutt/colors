@@ -1,0 +1,34 @@
+######################################################################################
+# Color def.	    FG		    BG		    Pattern
+######################################################################################
+color index	    brightwhite	    default	    '~N'    # new messages
+color index	    cyan	    default	    '~D'    # deleted messages
+color hdrdefault    black	    white
+color quoted	    color3	    default
+color quoted1	    green	    default
+color quoted2	    color3	    default
+color quoted3	    green	    default
+color indicator	    black	    cyan
+color attachment    brightblue	    white
+color error	    brightred	    default
+color message	    white	    default
+color search	    brightblack	    green
+color status	    brightyellow    blue
+color normal	    white	    default
+color bold	    brightwhite	    default
+color underline	    brightwhite	    default
+color markers	    magenta	    default
+color signature	    white	    default
+color tilde	    white	    default
+# URLs
+color body	    brightcyan	    default   "(https|http|ftp|news|telnet|finger)://[^ ]*"
+mono  body bold	    "(https|http|ftp|news|telnet|finger)://[^ ]*"
+# email addresses
+color body	    brightcyan	    default   "[-a-z_0-9_+.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+mono  body bold	    "[-a-z_0-9_+.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+color header	    brightred	    brightwhite "is in ORBS"
+color header	    brightred	    brightwhite "^X-Reject: "
+color header	    brightblue	    brightwhite	"^Delivered-to:"
+
+# vim:ts=8 sw=4 ft=muttrc

@@ -1,0 +1,7 @@
+source ~/.vimrc
+set textwidth=70
+set ts=8 sw=8 sts=0
+set comments=n:>,fb:-
+
+" Automatically deletes quoted signature:
+"au BufRead * normal :g/^> -- $/,/^$/-1d<CR><C-L>gg

@@ -1,0 +1,12 @@
+#mailboxes =.jobs 
+#mailboxes ~/Mail/inbox
+#mailboxes =proddev
+#mailboxes =svnusers
+
+#subscribe diskusi@cert.or.id
+#subscribe Prod_dev@developer2.cvsdude.com
+#subscribe users@subversion.tigris.org
+
+#send-hook 'diskusi@cert'	'my_hdr From: Ronny Haryanto <ronnylist@haryan.to>'
+
+# vim:ts=8 sw=4 ft=muttrc

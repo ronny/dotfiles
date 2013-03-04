@@ -1,0 +1,29 @@
+# # compressed folders, only for patched mutt see spinnaker.de
+# open-hook \\.gz$ "gzip -cd %f > %t" 
+# close-hook \\.gz$ "gzip -c %t > %f"
+# append-hook \\.gz$ "gzip -c %t >> %f"
+# open-hook \\.bz2$ "bzip2 -cd %f > %t" 
+# close-hook \\.bz2$ "bzip2 -c %t > %f"
+# append-hook \\.bz2$ "bzip2 -c %t >> %f"
+
+#set signature = ~/.mutt/signature
+#set sig_dashes = yes
+
+# send hooks (see also lists file)
+set default_hook = "~L %s"
+send-hook .			'my_hdr From: Ronny Haryanto <ronny@haryan.to>;\
+				set pgp_autosign'
+
+# folder hooks
+folder-hook . 'set index_format = "%4C %-Z %-19.19F %[%a %b %d %k:%M] [%4c] %s";\
+	set sort = threads'
+folder-hook '!' 'set sort = threads; set sort_aux = date-received'
+folder-hook '<' 'set index_format = "%4C %-Z %-19.19t %[%a %b %d %k:%M] [%4c] %s";\
+	set sort = date-received'
+folder-hook '>' 'set sort = date'
+
+# save hooks
+set default_hook = "~f %s | ~C %s"
+save-hook   .			'>'
+
+# vim:ts=8 sw=4 ft=muttrc

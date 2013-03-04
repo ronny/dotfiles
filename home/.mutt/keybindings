@@ -1,0 +1,24 @@
+# key bindings/macros
+macro	index	\Ca	"T~A\n"				"Tag all messages"
+macro	index	\Cq	"!clear;fetchmail -v\n"		"Run fetchmail"
+macro	pager	\Cq	"!clear;fetchmail -v\n"		"Run fetchmail"
+macro	index	\Cx	"!clear;fetchmail\n"		"Wake up fetchmail or run fetchmail with no verbose"
+macro	pager	\Cx	"!clear;fetchmail\n"		"Wake up fetchmail or run fetchmail with no verbose"
+macro	index	I	"c!\n"				"Go to inbox"
+macro	pager	I	"c!\n"				"Go to inbox"
+macro	pager	%	":set pipe_decode\n|tr A-Za-z N-ZA-Mn-za-m |less\n:unset pipe_decode\n" "ROT-13"
+macro	index	\eb	"/~b "				"Search in body"
+macro	index	\er	":source ~/.muttrc\n"		"Reload muttrc"
+
+bind pager 'w'		previous-page
+bind pager <down>	next-line
+bind pager <up>		previous-line
+bind pager G		bottom
+bind index '{'		previous-thread
+bind index '}'		next-thread
+bind pager <delete>	delete-message
+bind pager <insert>	undelete-message
+bind index <delete>	delete-message
+bind index <insert>	undelete-message
+
+# vim:ts=8 sw=4 ft=muttrc
