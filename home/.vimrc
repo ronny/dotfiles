@@ -1,8 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle-based .vimrc. Order matters.
+" Install vundle first: https://github.com/gmarik/vundle
 set nocompatible
 filetype off
-" Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
