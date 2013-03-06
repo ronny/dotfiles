@@ -49,6 +49,8 @@ Bundle 'loremipsum'
 Bundle 'exu/pgsql.vim'
 Bundle 'VimClojure'
 
+Bundle 'airblade/vim-gitgutter'
+
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ronny/birds-of-paradise.vim'
 
@@ -73,6 +75,9 @@ let NERDTreeIgnore = ['\.pyc$']
 
 set background=dark
 colorscheme birds-of-paradise
+
+" 'Transparent' gutter background
+highlight clear SignColumn
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Others
