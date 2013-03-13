@@ -11,7 +11,7 @@ COMPLETION_WAITING_DOTS=true
 # Antigen — A zsh plugin manager
 
 export ANTIGEN_DEFAULT_REPO_URL=git@github.com:ronny/oh-my-zsh.git
-source ~/.antigen/antigen.zsh
+source ~/.zsh-antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen-lib
