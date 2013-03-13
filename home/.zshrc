@@ -1,5 +1,5 @@
 ######################################################################################
-# oh-my-zsh setting vars
+# oh-my-zsh settings
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -14,31 +14,22 @@ COMPLETION_WAITING_DOTS=true
 export ANTIGEN_DEFAULT_REPO_URL="git@github.com:ronny/oh-my-zsh.git"
 source ~/.zsh-antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
+# Load oh-my-zsh
 antigen-lib
 
 # Bundles from the default repo (see ANTIGEN_DEFAULT_REPO_URL)
-antigen-bundle brew
 antigen-bundle bundler
-antigen-bundle coffee
-antigen-bundle django
-antigen-bundle gem
-antigen-bundle github
-antigen-bundle heroku
-antigen-bundle lein
 antigen-bundle npm
-antigen-bundle pip
-antigen-bundle redis-cli
-antigen-bundle rvm
 antigen-bundle virtualenvwrapper
 
-# Syntax highlighting bundle.
+# Other bundles
+antigen-bundle zsh-users/zsh-completions src
 # NOTE: zsh-syntax-highlighting must be loaded before zsh-history-substring-search
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 
 # Load the theme.
-antigen-theme git@github.com:ronny/oh-my-zsh.git themes/ronny
+antigen-theme ronny
 
 # Tell antigen that you're done.
 antigen-apply
