@@ -63,3 +63,9 @@ setopt no_beep
 
 # Aliases
 alias ls='ls -FGh'
+
+# Keybindings
+# Default to emacs style, then override as necessary
+bindkey -e
+bindkey "^F" history-beginning-search-backward
+bindkey "^G" history-beginning-search-forward
