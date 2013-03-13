@@ -7,10 +7,11 @@ CASE_SENSITIVE="true"
 # Red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS=true
 
+
 ######################################################################################
 # Antigen — A zsh plugin manager
 
-export ANTIGEN_DEFAULT_REPO_URL=git@github.com:ronny/oh-my-zsh.git
+export ANTIGEN_DEFAULT_REPO_URL="git@github.com:ronny/oh-my-zsh.git"
 source ~/.zsh-antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -29,11 +30,7 @@ antigen-bundle npm
 antigen-bundle pip
 antigen-bundle redis-cli
 antigen-bundle rvm
-
-# Only in ubuntu
-#antigen-bundle command-not-found
-
-antigen-bundle kennethreitz/autoenv
+antigen-bundle virtualenvwrapper
 
 # Syntax highlighting bundle.
 # NOTE: zsh-syntax-highlighting must be loaded before zsh-history-substring-search
@@ -41,7 +38,7 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 
 # Load the theme.
-antigen-theme ronny/oh-my-zsh themes/ronny
+antigen-theme git@github.com:ronny/oh-my-zsh.git themes/ronny
 
 # Tell antigen that you're done.
 antigen-apply
