@@ -17,8 +17,7 @@ export ANDROID_HOME="$HOME/src/android-sdk-mac_x86"
 # system stuff
 export LANG="en_AU.UTF-8"
 
-# Do PATH in ~/.zshrc (wtf?!) instead
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+# NOTE: set PATH in .zprofile
 
 #export ARCHFLAGS="-arch i386 -arch x86_64"
 export ARCHFLAGS="-arch x86_64"

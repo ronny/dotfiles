@@ -1,35 +1,65 @@
-export PATH="/usr/local/share/python:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
-
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-export ZSH_THEME="ronny"
+######################################################################################
+# oh-my-zsh setting vars
 
 # Set to this to use case-sensitive completion
-export CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+# Red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS=true
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+######################################################################################
+# Antigen — A zsh plugin manager
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
+export ANTIGEN_DEFAULT_REPO_URL=git@github.com:ronny/oh-my-zsh.git
+source ~/.antigen/antigen.zsh
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Load the oh-my-zsh's library.
+antigen-lib
+
+# Bundles from the default repo (see ANTIGEN_DEFAULT_REPO_URL)
+antigen-bundle brew
+antigen-bundle bundler
+antigen-bundle coffee
+antigen-bundle django
+antigen-bundle gem
+antigen-bundle github
+antigen-bundle heroku
+antigen-bundle lein
+antigen-bundle npm
+antigen-bundle pip
+antigen-bundle redis-cli
+antigen-bundle rvm
+
+# Only in ubuntu
+#antigen-bundle command-not-found
+
+antigen-bundle kennethreitz/autoenv
+
+# Syntax highlighting bundle.
 # NOTE: zsh-syntax-highlighting must be loaded before zsh-history-substring-search
-plugins=(git gem pip rails3 zsh-syntax-highlighting zsh-history-substring-search)
+antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle zsh-users/zsh-history-substring-search
 
-source $ZSH/oh-my-zsh.sh
+# Load the theme.
+antigen-theme ronny/oh-my-zsh themes/ronny
 
+# Tell antigen that you're done.
+antigen-apply
+
+######################################################################################
+# Other customisations.
+
+# Removes duplicates in PATH.
+typeset -U path
+
+# No corrections, please.
 unsetopt correct_all
 
-# Customize to your needs...
+# Completion behaviour
+setopt auto_param_slash
+setopt no_auto_remove_slash
+setopt complete_aliases
+setopt no_beep
 
-# vim: tw=0
+# Aliases
+alias ls='ls -FGh'
