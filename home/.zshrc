@@ -44,6 +44,10 @@ typeset -U path
 unsetopt correct_all
 
 # Completion behaviour
+autoload -U compinit
+compinit
+# show completion menu when number of options is at least 2
+zstyle ':completion:*' menu select=2
 setopt auto_param_slash
 setopt no_auto_remove_slash
 setopt complete_aliases
