@@ -40,7 +40,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
 Bundle 'indenthtml.vim'
-"Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'bufkill.vim'
 Bundle 'nathanaelkane/vim-command-w'
@@ -48,10 +47,12 @@ Bundle 'CSSMinister'
 Bundle 'loremipsum'
 Bundle 'exu/pgsql.vim'
 Bundle 'VimClojure'
-
 Bundle 'airblade/vim-gitgutter'
 
-Bundle 'altercation/vim-colors-solarized'
+" Snippets
+Bundle 'ronny/scss-snippets.vim'
+
+" Colour scheme
 Bundle 'ronny/birds-of-paradise.vim'
 
 filetype plugin indent on
@@ -69,7 +70,7 @@ let g:ctrlp_tabpage_position = 'al'
 let g:syntastic_ruby_exec = $HOME.'/.rbenv/shims/ruby'
 
 let NERDTreeIgnore = ['\.pyc$']
-
+"let NERDTreeShowBookmarks = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colour schemes
@@ -131,5 +132,6 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto commands
-"
+
+" Remove trailing whitespaces on save
 autocmd FileType ruby,py,haml,html,scss,css,erb,js,coffee autocmd BufWritePre <buffer> :%s/\s\+$//e
