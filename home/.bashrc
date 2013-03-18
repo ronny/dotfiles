@@ -11,9 +11,3 @@ export GIT_PS1_SHOWDIRTYSTATE="youbet"
 source ~/.git-completion.bash
 source ~/.hg-completion.bash
 export PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[01;31m\]\[\033[01;34m\]\$ \[\033[00m\]'
-
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
