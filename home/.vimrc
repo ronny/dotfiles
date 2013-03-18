@@ -65,7 +65,8 @@ let g:html_indent_style1 = "inc"
 
 let g:ctrlp_tabpage_position = 'al'
 
-let g:syntastic_ruby_exec = $HOME.'/.rvm/bin/ruby'
+"let g:syntastic_ruby_exec = $HOME.'/.rvm/bin/ruby'
+let g:syntastic_ruby_exec = $HOME.'/.rbenv/shims/ruby'
 
 let NERDTreeIgnore = ['\.pyc$']
 
