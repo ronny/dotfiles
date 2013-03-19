@@ -68,6 +68,13 @@ let g:ctrlp_tabpage_position = 'al'
 
 "let g:syntastic_ruby_exec = $HOME.'/.rvm/bin/ruby'
 let g:syntastic_ruby_exec = $HOME.'/.rbenv/shims/ruby'
+let g:syntastic_check_on_open = 1
+let g:syntastic_error_symbol = '×'
+let g:syntastic_warning_symbol = '!'
+let g:syntastic_enable_balloons = 1
+let g:syntastic_auto_loc_list = 1
+
+let g:gitgutter_enabled = 0
 
 let NERDTreeIgnore = ['\.pyc$']
 "let NERDTreeShowBookmarks = 1
