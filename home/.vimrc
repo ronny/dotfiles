@@ -111,6 +111,8 @@ set hlsearch
 
 "set formatprg=par\ -w78j
 
+" where to put swap files
+set dir=~/.vim/swapfiles,~/.vim/backups
 set backup
 set backupdir=~/.vim/backups
 set undofile
