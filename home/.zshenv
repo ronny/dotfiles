@@ -19,8 +19,9 @@ export VIRTUALENV_USE_DISTRIBUTE=true
 if [[ -x /usr/local/bin/python ]]; then
   export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
 else
-  echo "WARNING: using `which python2.7` as VIRTUALENVWRAPPER_PYTHON because /usr/local/bin/python is unavailable"
-  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
+  py27=`which python2.7`
+  echo "WARNING: using ${py27} as VIRTUALENVWRAPPER_PYTHON because /usr/local/bin/python is unavailable"
+  export VIRTUALENVWRAPPER_PYTHON=${py27}
 fi
 export WORKON_HOME="$HOME/.virtualenvs"
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/downloads"
