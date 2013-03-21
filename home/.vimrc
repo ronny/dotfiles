@@ -144,3 +144,7 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Remove trailing whitespaces on save
 autocmd FileType ruby,py,haml,html,scss,css,erb,js,coffee autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" RSpec syntax highlighting
+autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
+highlight def link rubyRspec Function
