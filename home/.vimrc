@@ -76,7 +76,7 @@ let g:syntastic_auto_loc_list = 1
 
 let g:gitgutter_enabled = 0
 
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '^tags$']
 "let NERDTreeShowBookmarks = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
