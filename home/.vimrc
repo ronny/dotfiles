@@ -49,6 +49,7 @@ Bundle 'loremipsum'
 Bundle 'exu/pgsql.vim'
 Bundle 'VimClojure'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'terryma/vim-multiple-cursors'
 
 " Snippets
 Bundle 'ronny/scss-snippets.vim'
