@@ -8,9 +8,9 @@
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-scutil --set ComputerName "irony"
-scutil --set HostName "irony"
-scutil --set LocalHostName "irony"
+scutil --set ComputerName "envy"
+scutil --set HostName "envy"
+scutil --set LocalHostName "envy"
 
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -27,7 +27,7 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
-#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -52,7 +52,7 @@ defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 # defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
-# defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
 # Commented out, as this is known to cause problems when saving files in Adobe Illustrator CS5 :(
@@ -72,6 +72,11 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+# Flip/invert trackpad orientation; enable auto orientation.
+defaults write com.apple.trackpad.orientation TrackpadOrientationMode 1
+sudo defaults write com.apple.MultitouchSupport ForceAutoOrientation YES
+
 
 # Trackpad: swipe between pages with three fingers
 # defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
@@ -399,7 +404,7 @@ defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
 defaults write com.twitter.twitter-mac ShowFullNames -bool false
 
 # Hide the app in the background if it’s not the front-most window
-defaults write com.twitter.twitter-mac HideInBackground -bool true
+#defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
