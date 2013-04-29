@@ -1,4 +1,4 @@
-export PATH="/usr/local/share/python:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+export PATH="/usr/local/share/python:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
 
 # Try loading rbenv first, then rvm.
 if which rbenv > /dev/null; then
