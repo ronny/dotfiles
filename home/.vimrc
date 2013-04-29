@@ -50,6 +50,7 @@ Bundle 'exu/pgsql.vim'
 Bundle 'VimClojure'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'elzr/vim-json'
 
 " Snippets
 Bundle 'ronny/scss-snippets.vim'
@@ -122,6 +123,9 @@ set undodir=~/.vim/undofiles
 
 set wildignore+=*/tmp/*,*.pyc,*.swp,*.zip,*.so
 
+" more natural split opening
+set splitbelow
+set splitright
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
@@ -146,3 +150,5 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Remove trailing whitespaces on save
 autocmd FileType ruby,py,haml,html,scss,css,erb,js,coffee autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+autocmd FileType json set equalprg=json_reformat
