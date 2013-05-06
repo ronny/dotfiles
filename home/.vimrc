@@ -47,10 +47,13 @@ Bundle 'nathanaelkane/vim-command-w'
 Bundle 'CSSMinister'
 Bundle 'loremipsum'
 Bundle 'exu/pgsql.vim'
-Bundle 'VimClojure'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'elzr/vim-json'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kien/rainbow_parentheses.vim'
 
 " Snippets
 Bundle 'ronny/scss-snippets.vim'
@@ -81,6 +84,8 @@ let g:gitgutter_enabled = 0
 
 let NERDTreeIgnore = ['\.pyc$', '^tags$']
 "let NERDTreeShowBookmarks = 1
+"
+let g:clojure_align_multiline_strings = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colour schemes
@@ -152,3 +157,8 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 autocmd FileType ruby,py,haml,html,scss,css,erb,js,coffee autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 autocmd FileType json set equalprg=json_reformat
+
+au BufEnter *.clj RainbowParenthesesActivate
+au BufEnter *.clj RainbowParenthesesLoadRound
+au BufEnter *.clj RainbowParenthesesLoadSquare
+au BufEnter *.clj RainbowParenthesesLoadBraces
