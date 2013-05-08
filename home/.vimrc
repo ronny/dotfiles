@@ -55,6 +55,7 @@ Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'slim-template/vim-slim'
+Bundle 'nono/vim-handlebars'
 
 " Snippets
 Bundle 'ronny/scss-snippets.vim'
@@ -163,3 +164,5 @@ au BufEnter *.clj RainbowParenthesesActivate
 au BufEnter *.clj RainbowParenthesesLoadRound
 au BufEnter *.clj RainbowParenthesesLoadSquare
 au BufEnter *.clj RainbowParenthesesLoadBraces
+
+autocmd BufEnter *.slimbars set ft=slim
