@@ -152,6 +152,10 @@ nmap <PageUp> <C-b>
 nmap <PageDown> <C-f>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+" open tag in a new tab
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nmap <C-Enter> <C-w><C-]><C-w>T
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto commands
 
