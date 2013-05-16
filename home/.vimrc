@@ -170,3 +170,5 @@ au BufEnter *.clj RainbowParenthesesLoadSquare
 au BufEnter *.clj RainbowParenthesesLoadBraces
 
 autocmd BufEnter *.slimbars set ft=slim
+
+autocmd FileType markdown set textwidth=78
