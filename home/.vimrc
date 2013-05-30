@@ -73,6 +73,9 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 let g:ctrlp_tabpage_position = 'al'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_mruf_relative = 1
 
 "let g:syntastic_ruby_exec = $HOME.'/.rvm/bin/ruby'
 let g:syntastic_ruby_exec = $HOME.'/.rbenv/shims/ruby'
@@ -86,7 +89,10 @@ let g:gitgutter_enabled = 0
 
 let NERDTreeIgnore = ['\.pyc$', '^tags$']
 "let NERDTreeShowBookmarks = 1
-"
+
+let NERDSpaceDelims = 1
+
+
 let g:clojure_align_multiline_strings = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,6 +131,7 @@ set hlsearch
 set dir=~/.vim/swapfiles,~/.vim/backups
 set backup
 set backupdir=~/.vim/backups
+set backupskip=/tmp/*,/private/tmp/*
 set undofile
 set undodir=~/.vim/undofiles
 
@@ -171,4 +178,4 @@ au BufEnter *.clj RainbowParenthesesLoadBraces
 
 autocmd BufEnter *.slimbars set ft=slim
 
-autocmd FileType markdown set textwidth=78
+autocmd FileType markdown set tw=78 sw=4 sts=4 ts=4
