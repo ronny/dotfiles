@@ -1,5 +1,5 @@
 # NOTE: set PATH in .zprofile
-export PATH="/usr/local/share/python:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+export PATH="/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
 
 # System
 export LANG="en_AU.UTF-8"
