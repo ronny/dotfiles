@@ -3,7 +3,6 @@
 *.pyo
 *.swp
 .DS_Store*
-Icon?
 Thumbs.db
 *.sublime-workspace
 tags
