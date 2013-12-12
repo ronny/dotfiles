@@ -353,6 +353,9 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 # Enable the debug menu in Disk Utility
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 
+# Disable saving new documents to iCloud by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
 ###############################################################################
 # Terminal                                                                    #
 ###############################################################################
