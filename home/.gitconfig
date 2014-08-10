@@ -1,6 +1,7 @@
 [user]
 	name = Ronny Haryanto
 	email = ronny@haryan.to
+	signingkey = 1579B222
 [color]
 	diff = auto
 	status = auto
