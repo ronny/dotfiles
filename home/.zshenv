@@ -1,30 +1,23 @@
-# NOTE: set PATH in .zprofile
-export PATH="/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+# This file is sourced by all instances of Zsh, and thus, it should be kept as
+# small as possible and should only define environment variables.
+#
+# Load order:
+# 01. /etc/zshenv
+# 02. ~/.zshenv
+# 03. /etc/zprofile
+# 04. ~/.zprofile
+# 05. /etc/zshrc
+# 06. ~/.zshrc
+# 07. ~/.zpreztorc
+# 08. /etc/zlogin
+# 09. ~/.zlogin
+# 10. ~/.zlogout
+# 11. /etc/zlogout
 
-# System
-export LANG="en_AU.UTF-8"
+# echo "zshenv"
 
-# Apps
-export EDITOR="vim"
-export VISUAL="vim"
-export PAGER="less"
-
-# Options
-export LSCOLORS="Exfxcxdxbxegedabagacad"
-export LESS="-C -S -R"
-export SUDO_PROMPT='[sudo] password for %u:'
-export ARCHFLAGS="-arch x86_64"
-
-# Python
-export VIRTUALENV_USE_DISTRIBUTE=true
-if [[ -x /usr/local/bin/python ]]; then
-  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
-else
-  py27=`which python2.7`
-  echo "WARNING: using ${py27} as VIRTUALENVWRAPPER_PYTHON because /usr/local/bin/python is unavailable"
-  export VIRTUALENVWRAPPER_PYTHON=${py27}
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
-export WORKON_HOME="$HOME/.virtualenvs"
-export PIP_DOWNLOAD_CACHE="$HOME/.pip/downloads"
-export PIP_RESPECT_VIRTUALENV=true
-export PIP_VIRTUALENV_BASE="$WORKON_HOME"
+

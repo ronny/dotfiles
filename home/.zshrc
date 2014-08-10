@@ -1,47 +1,34 @@
-######################################################################################
-# oh-my-zsh settings
+# This file is sourced by interactive shells. It should define aliases,
+# functions, shell options, and key bindings.
+#
+# Load order:
+# 01. /etc/zshenv
+# 02. ~/.zshenv
+# 03. /etc/zprofile
+# 04. ~/.zprofile
+# 05. /etc/zshrc
+# 06. ~/.zshrc
+# 07. ~/.zpreztorc
+# 08. /etc/zlogin
+# 09. ~/.zlogin
+# 10. ~/.zlogout
+# 11. /etc/zlogout
 
-# Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
+# echo "zshrc"
 
-# Red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS=true
-
-
-######################################################################################
-# Antigen — A zsh plugin manager
-
-export ANTIGEN_DEFAULT_REPO_URL="git@github.com:ronny/oh-my-zsh.git"
-source ~/.zsh-antigen/antigen.zsh
-
-# Load oh-my-zsh
-antigen-lib
-
-# Bundles from the default repo (see ANTIGEN_DEFAULT_REPO_URL)
-antigen-bundle bundler
-antigen-bundle npm
-antigen-bundle virtualenvwrapper
-
-# Other bundles
-antigen-bundle zsh-users/zsh-completions src
-# NOTE: zsh-syntax-highlighting must be loaded before zsh-history-substring-search
-antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle zsh-users/zsh-history-substring-search
-
-# Load the theme.
-antigen-theme ronny
-
-# Tell antigen that you're done.
-antigen-apply
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 ######################################################################################
-# Other customisations.
+# Customisations
 
-# Removes duplicates in PATH.
-typeset -U path
+# no duplicates in paths
+typeset -gU cdpath fpath mailpath path
 
-# No corrections, please.
-unsetopt correct_all
+# No corrections, please. Ever.
+unsetopt CORRECT
 
 # Completion behaviour
 autoload -U compinit
@@ -61,3 +48,4 @@ alias ls='ls -FGh'
 bindkey -e
 bindkey "^F" history-beginning-search-backward
 bindkey "^G" history-beginning-search-forward
+
