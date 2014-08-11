@@ -42,6 +42,7 @@ setopt no_beep
 
 # Aliases
 alias ls='ls -FGh'
+alias be='bundle exec'
 
 # Keybindings
 # Default to emacs style, then override as necessary
