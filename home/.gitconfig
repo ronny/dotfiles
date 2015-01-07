@@ -32,3 +32,7 @@
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 [diff]
 	algorithm = patience
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f

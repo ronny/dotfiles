@@ -8,6 +8,4 @@ alias sudo="sudo -p \"[sudo] password for %u:\""
 alias ls='ls -FG'
 
 export GIT_PS1_SHOWDIRTYSTATE="youbet"
-source ~/.git-completion.bash
-source ~/.hg-completion.bash
-export PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[01;31m\]\[\033[01;34m\]\$ \[\033[00m\]'
+export PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[01;32m\]\[\033[01;31m\]\[\033[01;34m\] (bash)\$ \[\033[00m\]'

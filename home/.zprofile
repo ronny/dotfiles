@@ -40,10 +40,13 @@ export LESS='-C -S -R'
 #   $cdpath
 # )
 
+export GOPATH="$HOME/go"
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{share/npm/bin,bin,sbin}
   $path
+  $GOPATH/bin
   $HOME/bin
 )
 
@@ -77,3 +80,7 @@ export WORKON_HOME="$HOME/.virtualenvs"
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/downloads"
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE="$WORKON_HOME"
+
+# Android Studio
+export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/"
+launchctl setenv STUDIO_JDK ${STUDIO_JDK}
