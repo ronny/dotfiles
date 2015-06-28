@@ -44,6 +44,9 @@ setopt no_beep
 alias ls='ls -FGh'
 alias be='bundle exec'
 
+# requires `brew install thefuck`
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+
 # Keybindings
 # Default to emacs style, then override as necessary
 bindkey -e

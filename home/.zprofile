@@ -44,7 +44,7 @@ export GOPATH="$HOME/go"
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{share/npm/bin,bin,sbin}
+  /usr/local/{bin,sbin}
   $path
   $GOPATH/bin
   $HOME/bin

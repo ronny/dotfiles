@@ -34,3 +34,6 @@ else
 	echo "Could not load rbenv or rvm, using system ruby."
     fi
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
