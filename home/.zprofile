@@ -77,7 +77,6 @@ else
   export VIRTUALENVWRAPPER_PYTHON=${py27}
 fi
 export WORKON_HOME="$HOME/.virtualenvs"
-export PIP_DOWNLOAD_CACHE="$HOME/.pip/downloads"
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE="$WORKON_HOME"
 
