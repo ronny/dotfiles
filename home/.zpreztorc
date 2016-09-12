@@ -42,6 +42,7 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'git' \
   'ruby' \
+  'node' \
   'syntax-highlighting' \
   'tmux'
 
@@ -105,6 +106,10 @@ zstyle ':prezto:module:prompt' theme 'ronny'
 
 # Auto switch the Ruby version on directory change.
 # zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+
+
+# %v - Node.js version.
+zstyle ':prezto:module:node:info:version' format 'version:%v'
 
 #
 # Screen
