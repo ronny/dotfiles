@@ -54,3 +54,7 @@ bindkey "^F" history-beginning-search-backward
 bindkey "^G" history-beginning-search-forward
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+if [[ -x /usr/local/bin/kubectl ]]; then
+  source <(kubectl completion zsh)
+fi
