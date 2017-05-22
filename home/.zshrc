@@ -58,3 +58,7 @@ bindkey "^G" history-beginning-search-forward
 if [[ -x /usr/local/bin/kubectl ]]; then
   source <(kubectl completion zsh)
 fi
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /Users/ronny/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/ronny/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
