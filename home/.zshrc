@@ -24,6 +24,9 @@ fi
 ######################################################################################
 # Customisations
 
+# Include our custom completions
+fpath=(~/.zsh/completions $fpath)
+
 # no duplicates in paths
 typeset -gU cdpath fpath mailpath path
 
