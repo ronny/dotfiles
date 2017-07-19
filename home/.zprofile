@@ -47,6 +47,7 @@ path=(
   /usr/local/{bin,sbin}
   $path
   $GOPATH/bin
+  $HOME/miniconda3/bin
   $HOME/bin
 )
 
