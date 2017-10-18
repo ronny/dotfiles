@@ -65,3 +65,9 @@ fi
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [[ -f /Users/ronny/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/ronny/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/sls.zsh

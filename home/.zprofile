@@ -69,18 +69,18 @@ export SUDO_PROMPT='[sudo] password for %u:'
 export ARCHFLAGS="-arch x86_64"
 
 # Python
-export VIRTUALENV_USE_DISTRIBUTE=true
-if [[ -x /usr/local/bin/python ]]; then
-  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
-else
-  py27=`which python2.7`
-  echo "WARNING: using ${py27} as VIRTUALENVWRAPPER_PYTHON because /usr/local/bin/python is unavailable"
-  export VIRTUALENVWRAPPER_PYTHON=${py27}
-fi
-export WORKON_HOME="$HOME/.virtualenvs"
-export PIP_RESPECT_VIRTUALENV=true
-export PIP_VIRTUALENV_BASE="$WORKON_HOME"
+# export VIRTUALENV_USE_DISTRIBUTE=true
+# if [[ -x /usr/local/bin/python ]]; then
+#   export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
+# else
+#   py27=`which python2.7`
+#   echo "WARNING: using ${py27} as VIRTUALENVWRAPPER_PYTHON because /usr/local/bin/python is unavailable"
+#   export VIRTUALENVWRAPPER_PYTHON=${py27}
+# fi
+# export WORKON_HOME="$HOME/.virtualenvs"
+# export PIP_RESPECT_VIRTUALENV=true
+# export PIP_VIRTUALENV_BASE="$WORKON_HOME"
 
 # Android Studio
-export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/"
-launchctl setenv STUDIO_JDK ${STUDIO_JDK}
+# export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/"
+# launchctl setenv STUDIO_JDK ${STUDIO_JDK}

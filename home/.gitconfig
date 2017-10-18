@@ -36,3 +36,5 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[commit]
+	template = /Users/ronny/.stCommitMsg
