@@ -50,6 +50,8 @@ alias be='bundle exec'
 # requires `brew install thefuck`
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
+alias dhelm='docker run --rm -v $PWD/.kube/config:/root/.kube/config dtzar/helm-kubectl:2.6.2 helm'
+
 # Keybindings
 # Default to emacs style, then override as necessary
 bindkey -e
@@ -59,22 +61,31 @@ bindkey "^G" history-beginning-search-forward
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 if [[ -x /usr/local/bin/kubectl ]]; then
-  source <(kubectl completion zsh)
+  echo "Sourcing kubectl completion..."
+  source <(/usr/local/bin/kubectl completion zsh)
 fi
 
 if [[ -x /usr/local/bin/helm ]]; then
-  source <(helm completion zsh)
+  echo "Sourcing helm completion..."
+  source <(/usr/local/bin/helm completion zsh)
 fi
 
-# tabtab source for yarn package
-# uninstall by removing these lines or running `tabtab uninstall yarn`
-[[ -f /Users/ronny/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/ronny/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ronny/projects/iflix/events-processor/partition-updater/node_modules/tabtab/.completions/sls.zsh
+# Commented out because it's breaking completion for everything else
+# if [[ -x /usr/local/bin/aws-vault ]]; then
+#   echo "Sourcing aws-vault completion..."
+#   source <(/usr/local/bin/aws-vault --completion-script-zsh)
+# fi
+
+if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
+  echo "Sourcing awscli completion..."
+  source /usr/local/bin/aws_zsh_completer.sh
+fi
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
+  echo "Sourcing iterm2 shell integration..."
+  source ~/.iterm2_shell_integration.zsh
+fi
