@@ -61,12 +61,12 @@ bindkey "^G" history-beginning-search-forward
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 if [[ -x /usr/local/bin/kubectl ]]; then
-  echo "Sourcing kubectl completion..."
+  # echo "Sourcing kubectl completion..."
   source <(/usr/local/bin/kubectl completion zsh)
 fi
 
 if [[ -x /usr/local/bin/helm ]]; then
-  echo "Sourcing helm completion..."
+  # echo "Sourcing helm completion..."
   source <(/usr/local/bin/helm completion zsh)
 fi
 
@@ -77,7 +77,7 @@ fi
 # fi
 
 if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
-  echo "Sourcing awscli completion..."
+  # echo "Sourcing awscli completion..."
   source /usr/local/bin/aws_zsh_completer.sh
 fi
 
@@ -86,6 +86,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
-  echo "Sourcing iterm2 shell integration..."
+  # echo "Sourcing iterm2 shell integration..."
   source ~/.iterm2_shell_integration.zsh
 fi
