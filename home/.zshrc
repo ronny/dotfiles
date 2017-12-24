@@ -89,3 +89,7 @@ if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
   # echo "Sourcing iterm2 shell integration..."
   source ~/.iterm2_shell_integration.zsh
 fi
+
+if [[ -x /usr/local/bin/pipenv ]]; then
+  source <(/usr/local/bin/pipenv --completion)
+fi
