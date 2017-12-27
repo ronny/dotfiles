@@ -93,3 +93,7 @@ fi
 if [[ -x /usr/local/bin/pipenv ]]; then
   source <(/usr/local/bin/pipenv --completion)
 fi
+
+if [[ -x /usr/local/bin/pyenv ]]; then
+  source <(/usr/local/bin/pyenv init -)
+fi
