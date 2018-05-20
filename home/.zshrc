@@ -50,7 +50,7 @@ alias be='bundle exec'
 # requires `brew install thefuck`
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
-alias dhelm='docker run --rm -v $PWD/.kube/config:/root/.kube/config dtzar/helm-kubectl:2.6.2 helm'
+alias dhelm='docker run --rm -v $PWD/.kube/config:/root/.kube/config dtzar/helm-kubectl:2.7.2 helm'
 
 # Keybindings
 # Default to emacs style, then override as necessary
@@ -91,9 +91,16 @@ if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
 fi
 
 if [[ -x /usr/local/bin/pipenv ]]; then
-  source <(/usr/local/bin/pipenv --completion)
+  eval $(pipenv --completion)
 fi
 
 if [[ -x /usr/local/bin/pyenv ]]; then
   source <(/usr/local/bin/pyenv init -)
 fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ronny/projects/iflix/playback-event-processor/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ronny/projects/iflix/playback-event-processor/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ronny/projects/iflix/playback-event-processor/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ronny/projects/iflix/playback-event-processor/node_modules/tabtab/.completions/sls.zsh
