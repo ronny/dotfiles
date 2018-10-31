@@ -85,3 +85,4 @@ export ARCHFLAGS="-arch x86_64"
 # Android Studio
 # export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/"
 # launchctl setenv STUDIO_JDK ${STUDIO_JDK}
+#
