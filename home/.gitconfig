@@ -1,7 +1,8 @@
 [user]
 	name = Ronny Haryanto
 	email = ronny@haryan.to
-	signingkey = 72701F1041D8433D
+	#signingkey = 72701F1041D8433D
+	signingkey = 41D8433D
 [color]
 	diff = auto
 	status = auto
@@ -20,7 +21,7 @@
 	tool = kdiff3
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -39,6 +40,7 @@
 [commit]
 	template = /Users/ronny/.stCommitMsg
 	gpgsign = true
+	#gpgsign = false
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -46,3 +48,5 @@
 	smudge = git-lfs smudge -- %f
 [gpg]
 	program = /usr/local/bin/gpg
+[url "git@github.com:"]
+	insteadOf = https://github.com/
