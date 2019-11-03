@@ -89,3 +89,7 @@ export ARCHFLAGS="-arch x86_64"
 #
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# GPG 2 to allow pinentry etc
+# https://stackoverflow.com/a/42265848/273156
+export GPG_TTY=$(tty)
