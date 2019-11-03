@@ -41,6 +41,7 @@ export LESS='-C -S -R'
 # )
 
 export GOPATH="$HOME/go"
+export GOPRIVATE="github.com/iflix,github.com/iflix-letsplay"
 
 # Set the list of directories that Zsh searches for programs.
 path=(
