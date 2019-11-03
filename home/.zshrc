@@ -101,3 +101,11 @@ fi
 if [[ -x /usr/local/bin/pyenv ]]; then
   source <(/usr/local/bin/pyenv init -)
 fi
+
+
+
+# This has to be the last one!
+if [[ -x /usr/local/bin/starship ]]; then
+ eval "$(starship init zsh)"
+fi
+# Don't add anything after this line!

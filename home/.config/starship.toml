@@ -1,0 +1,56 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+prompt_order = [
+  "username",
+  "hostname",
+  "directory",
+  "git_branch",
+  "git_state",
+  "git_status",
+  "package",
+  "dotnet",
+  "golang",
+  "java",
+  "nodejs",
+  "python",
+  "ruby",
+  "rust",
+  "nix_shell",
+  "conda",
+  "kubernetes",
+  "memory_usage",
+  "aws",
+  "env_var",
+  "cmd_duration",
+  "line_break",
+  "jobs",
+  "battery",
+  "time",
+  "character",
+]
+
+
+# Replace the "❯" symbol in the prompt with "»"
+[character]      # The name of the module we are configuring is "character"
+symbol = "»"     # The "symbol" segment is being set to "»"
+
+# Disable the package module, hiding it from the prompt completely
+[aws]
+disabled = true
+
+[directory]
+fish_style_pwd_dir_length = 1
+
+[dotnet]
+disabled = true
+
+[kubernetes]
+# It's disabled by default
+disabled = false
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true
