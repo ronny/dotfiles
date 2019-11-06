@@ -54,3 +54,16 @@ disabled = true
 
 [package]
 disabled = true
+
+[golang]
+# symbol = "🐹 "
+symbol = "Go "
+# style = "bold cyan"
+style = "cyan"
+
+[git_status]
+style = "bold bright-yellow"
+modified = "✯"
+stashed = "⦿"
+renamed = "⇢"
+conflicted = "≠"
