@@ -72,12 +72,6 @@ if [[ -x /usr/local/bin/helm ]]; then
   source <(/usr/local/bin/helm completion zsh)
 fi
 
-# Commented out because it's breaking completion for everything else
-# if [[ -x /usr/local/bin/aws-vault ]]; then
-#   echo "Sourcing aws-vault completion..."
-#   source <(/usr/local/bin/aws-vault --completion-script-zsh)
-# fi
-
 if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
   # echo "Sourcing awscli completion..."
   source /usr/local/bin/aws_zsh_completer.sh

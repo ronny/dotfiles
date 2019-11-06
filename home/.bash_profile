@@ -35,9 +35,4 @@ else
     fi
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-# added by Miniconda3 installer
-export PATH="/Users/ronny/miniconda3/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
