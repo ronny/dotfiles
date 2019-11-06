@@ -62,8 +62,6 @@ bindkey -e
 bindkey "^F" history-beginning-search-backward
 bindkey "^G" history-beginning-search-forward
 
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
 if [[ -x /usr/local/bin/kubectl ]]; then
   # echo "Sourcing kubectl completion..."
   source <(/usr/local/bin/kubectl completion zsh)
@@ -85,10 +83,6 @@ if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
   source /usr/local/bin/aws_zsh_completer.sh
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm; --no-use makes it fast
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
   # echo "Sourcing iterm2 shell integration..."
   source ~/.iterm2_shell_integration.zsh
@@ -102,7 +96,31 @@ if [[ -x /usr/local/bin/pyenv ]]; then
   source <(/usr/local/bin/pyenv init -)
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm; --no-use makes it fast
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 # This has to be the last one!
 if [[ -x /usr/local/bin/starship ]]; then

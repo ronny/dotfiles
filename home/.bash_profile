@@ -37,8 +37,6 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
 # added by Miniconda3 installer
 export PATH="/Users/ronny/miniconda3/bin:$PATH"
 
