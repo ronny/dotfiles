@@ -48,7 +48,8 @@ setopt no_beep
 
 # Aliases
 alias ls='ls -FGh'
-alias cat='bat -p'
+# alias cat='bat -p'
+alias cat='bat'
 alias be='bundle exec'
 
 # requires `brew install thefuck`
@@ -62,38 +63,11 @@ bindkey -e
 bindkey "^F" history-beginning-search-backward
 bindkey "^G" history-beginning-search-forward
 
-if [[ -x /usr/local/bin/kubectl ]]; then
-  # echo "Sourcing kubectl completion..."
-  source <(/usr/local/bin/kubectl completion zsh)
-fi
-
-if [[ -x /usr/local/bin/helm ]]; then
-  # echo "Sourcing helm completion..."
-  source <(/usr/local/bin/helm completion zsh)
-fi
-
-if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
-  # echo "Sourcing awscli completion..."
-  source /usr/local/bin/aws_zsh_completer.sh
-fi
-
-if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
-  # echo "Sourcing iterm2 shell integration..."
-  source ~/.iterm2_shell_integration.zsh
-fi
-
-if [[ -x /usr/local/bin/pipenv ]]; then
-  eval $(pipenv --completion)
-fi
-
-if [[ -x /usr/local/bin/pyenv ]]; then
-  source <(/usr/local/bin/pyenv init -)
-fi
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm; --no-use makes it fast
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Auto load nvm after cd
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -116,8 +90,29 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# This has to be the last one!
+
+eval "$(kubectl completion zsh)"
+
+eval "$(helm completion zsh)"
+
+if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
+  # echo "Sourcing awscli completion..."
+  source /usr/local/bin/aws_zsh_completer.sh
+fi
+
+# if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
+#   # echo "Sourcing iterm2 shell integration..."
+#   source ~/.iterm2_shell_integration.zsh
+# fi
+
+if [[ -x /usr/local/bin/pyenv ]]; then
+  eval "$(/usr/local/bin/pyenv init -)"
+fi
+
+# if [[ -x /usr/local/bin/pipenv ]]; then
+  eval "$(pipenv --completion)"
+# fi
+
 if [[ -x /usr/local/bin/starship ]]; then
  eval "$(starship init zsh)"
 fi
-# Don't add anything after this line!
