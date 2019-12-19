@@ -47,9 +47,9 @@ export GOPRIVATE="github.com/iflix,github.com/iflix-letsplay"
 path=(
   /usr/local/{bin,sbin}
   $path
-  $GOPATH/bin
-  $HOME/miniconda3/bin
   $HOME/bin
+  $GOPATH/bin
+  $HOME/.cargo/bin
   $HOME/.local/bin    # pipsi
 )
 
@@ -87,8 +87,6 @@ export ARCHFLAGS="-arch x86_64"
 # export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/"
 # launchctl setenv STUDIO_JDK ${STUDIO_JDK}
 #
-
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # GPG 2 to allow pinentry etc
 # https://stackoverflow.com/a/42265848/273156
