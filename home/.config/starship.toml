@@ -50,7 +50,7 @@ disabled = true
 disabled = true
 
 [line_break]
-disabled = true
+disabled = false
 
 [package]
 disabled = true
