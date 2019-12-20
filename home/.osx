@@ -8,9 +8,9 @@
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-scutil --set ComputerName "irony"
-scutil --set HostName "irony"
-scutil --set LocalHostName "irony"
+scutil --set ComputerName "crony"
+scutil --set HostName "crony"
+scutil --set LocalHostName "crony"
 
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
