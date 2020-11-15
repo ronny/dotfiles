@@ -49,6 +49,7 @@ path=(
   $path
   $HOME/bin
   $GOPATH/bin
+  $HOME/.krew/bin
   $HOME/.cargo/bin
   $HOME/.local/bin    # pipsi
 )
@@ -91,3 +92,5 @@ export ARCHFLAGS="-arch x86_64"
 # GPG 2 to allow pinentry etc
 # https://stackoverflow.com/a/42265848/273156
 export GPG_TTY=$(tty)
+
+export PATH="$HOME/.cargo/bin:$PATH"
