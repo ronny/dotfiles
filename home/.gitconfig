@@ -14,14 +14,15 @@
 	st = status -sb
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = /Users/ronny/.gitignore_global
+	excludesfile = /Users/ronny/.homesick/repos/dotfiles/home/.gitignore
 	autocrlf = input
 	safecrlf = false
+  pager = delta
 [merge]
 	tool = kdiff3
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -46,3 +47,12 @@
 	program = /usr/local/bin/gpg
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[pull]
+	rebase = false
+[delta]
+  plus-color = green bold "#037b00"
+  minus-color = red bold "#8d0003"
+  syntax-theme = ansi-dark
+	side-by-side = true
+[interactive]
+  diffFilter = delta --color-only
