@@ -16,8 +16,8 @@
 
 # echo "zshrc"
 
-# Uncomment for profiling
-#zmodload zsh/zprof
+# Uncomment for profiling (see also the end of this file)
+# zmodload zsh/zprof
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -87,8 +87,8 @@ load-nvmrc() {
     nvm use default
   fi
 }
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
 
 
 eval "$(kubectl completion zsh)"
@@ -116,3 +116,7 @@ fi
 if [[ -x /usr/local/bin/starship ]]; then
  eval "$(starship init zsh)"
 fi
+
+
+# Uncomment to print out the result of profiling (typically start up only; see also the top of this file)
+# zprof
