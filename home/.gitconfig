@@ -17,7 +17,7 @@
 	excludesfile = /Users/ronny/.homesick/repos/dotfiles/home/.gitignore
 	autocrlf = input
 	safecrlf = false
-  pager = delta
+  pager = less
 [merge]
 	tool = kdiff3
 [difftool "sourcetree"]
@@ -54,5 +54,5 @@
   minus-color = red bold "#8d0003"
   syntax-theme = ansi-dark
 	side-by-side = true
-[interactive]
-  diffFilter = delta --color-only
+# [interactive]
+#   diffFilter = delta --color-only
