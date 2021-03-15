@@ -94,7 +94,3 @@ export ARCHFLAGS="-arch x86_64"
 export GPG_TTY=$(tty)
 
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# awscli auto-prompt (like completion)
-# https://github.com/aws/aws-cli/issues/5664
-export AWS_CLI_AUTO_PROMPT=on

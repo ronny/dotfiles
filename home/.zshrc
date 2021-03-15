@@ -95,9 +95,9 @@ eval "$(kubectl completion zsh)"
 
 eval "$(helm completion zsh)"
 
-if [[ -x /usr/local/bin/aws_zsh_completer.sh ]]; then
+if [[ -x /usr/local/bin/aws_completer ]]; then
   # echo "Sourcing awscli completion..."
-  source /usr/local/bin/aws_zsh_completer.sh
+  complete -C '/usr/local/bin/aws_completer' aws
 fi
 
 # if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
@@ -116,7 +116,6 @@ fi
 if [[ -x /usr/local/bin/starship ]]; then
  eval "$(starship init zsh)"
 fi
-
 
 # Uncomment to print out the result of profiling (typically start up only; see also the top of this file)
 # zprof
