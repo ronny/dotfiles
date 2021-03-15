@@ -49,7 +49,7 @@ setopt no_beep
 # Aliases
 alias ls='ls -FGh'
 # alias cat='bat -p'
-alias cat='bat'
+# alias cat='bat'
 alias be='bundle exec'
 
 # requires `brew install thefuck`
