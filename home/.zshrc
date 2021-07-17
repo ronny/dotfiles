@@ -65,7 +65,7 @@ bindkey "^G" history-beginning-search-forward
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm; --no-use makes it fast
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Auto load nvm after cd
 # place this after nvm initialization!
@@ -95,9 +95,9 @@ eval "$(kubectl completion zsh)"
 
 eval "$(helm completion zsh)"
 
-if [[ -x /usr/local/bin/aws_completer ]]; then
+if [[ -x /opt/homebrew/bin/aws_completer ]]; then
   # echo "Sourcing awscli completion..."
-  complete -C '/usr/local/bin/aws_completer' aws
+  complete -C '/opt/homebrew/bin/aws_completer' aws
 fi
 
 # if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
@@ -105,17 +105,19 @@ fi
 #   source ~/.iterm2_shell_integration.zsh
 # fi
 
-if [[ -x /usr/local/bin/pyenv ]]; then
-  eval "$(/usr/local/bin/pyenv init -)"
-fi
+eval "$(pyenv init -)"
 
-# if [[ -x /usr/local/bin/pipenv ]]; then
-  eval "$(pipenv --completion)"
+# if [[ -x /opt/homebrew/bin/pipenv ]]; then
+  # eval "$(pipenv --completion)"
 # fi
 
-if [[ -x /usr/local/bin/starship ]]; then
+if [[ -x /opt/homebrew/bin/starship ]]; then
  eval "$(starship init zsh)"
 fi
 
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
 # Uncomment to print out the result of profiling (typically start up only; see also the top of this file)
 # zprof
+
+export PATH="$HOME/.poetry/bin:$PATH"

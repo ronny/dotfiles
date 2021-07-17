@@ -146,7 +146,7 @@ if has("gui_win32") || has("win32")
     "let shell='command.com'
 endif
 
-if $SHELL =~ '/usr/local/bin/fish'
+if $SHELL =~ '/opt/homebrew/bin/fish'
    set shell='/bin/sh'
 endif
 

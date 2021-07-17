@@ -8,7 +8,7 @@ fi
 # User specific environment and startup programs
 
 export LANG="en_AU.UTF-8"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin"
+export PATH="/opt/homebrew/bin:/usr/local/sbin:$PATH:$HOME/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export PAGER=less
 export LESS="$LESS -C -S -R"
@@ -36,3 +36,5 @@ else
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"

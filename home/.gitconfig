@@ -22,7 +22,7 @@
 	tool = kdiff3
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -44,7 +44,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
@@ -56,3 +56,5 @@
 	side-by-side = true
 # [interactive]
 #   diffFilter = delta --color-only
+[init]
+	defaultBranch = main
