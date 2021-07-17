@@ -19,6 +19,8 @@
 # Uncomment for profiling (see also the end of this file)
 # zmodload zsh/zprof
 
+# Use zgenom to load prezto, don't load prezto directly
+# https://github.com/jandamm/zgenom
 source "${HOME}/.zgenom/zgenom.zsh"
 
 # if the init script doesn't exist
@@ -57,7 +59,7 @@ if ! zgenom saved; then
     zgenom save
 fi
 
-# Source Prezto.
+# Use zgenom to load prezto, don't load prezto directly
 # if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 #   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 # fi
@@ -144,6 +146,7 @@ if [[ -x /opt/homebrew/bin/starship ]]; then
 fi
 
 
+# Use zgenom to load prezto, don't load prezto directly
 # source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Uncomment to print out the result of profiling (typically start up only; see also the top of this file)
