@@ -51,6 +51,7 @@ path=(
   $GOPATH/bin
   $HOME/.krew/bin
   $HOME/.cargo/bin
+  $HOME/.poetry/bin
   $HOME/.local/bin    # pipsi
 )
 
@@ -98,4 +99,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 eval "$(pyenv init --path)"
 
-export PATH="$HOME/.cargo/bin:$PATH"

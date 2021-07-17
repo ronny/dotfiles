@@ -48,14 +48,6 @@ setopt no_beep
 
 # Aliases
 alias ls='ls -FGh'
-# alias cat='bat -p'
-# alias cat='bat'
-alias be='bundle exec'
-
-# requires `brew install thefuck`
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-
-alias dhelm='docker run --rm -v $PWD/.kube/config:/root/.kube/config dtzar/helm-kubectl:2.7.2 helm'
 
 # Keybindings
 # Default to emacs style, then override as necessary
@@ -65,7 +57,6 @@ bindkey "^G" history-beginning-search-forward
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm; --no-use makes it fast
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Auto load nvm after cd
 # place this after nvm initialization!
@@ -91,14 +82,13 @@ load-nvmrc() {
 # load-nvmrc
 
 
-eval "$(kubectl completion zsh)"
+# eval "$(kubectl completion zsh)"
+# eval "$(helm completion zsh)"
 
-eval "$(helm completion zsh)"
-
-if [[ -x /opt/homebrew/bin/aws_completer ]]; then
-  # echo "Sourcing awscli completion..."
-  complete -C '/opt/homebrew/bin/aws_completer' aws
-fi
+# if [[ -x /opt/homebrew/bin/aws_completer ]]; then
+#   # echo "Sourcing awscli completion..."
+#   complete -C '/opt/homebrew/bin/aws_completer' aws
+# fi
 
 # if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
 #   # echo "Sourcing iterm2 shell integration..."
@@ -119,5 +109,3 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Uncomment to print out the result of profiling (typically start up only; see also the top of this file)
 # zprof
-
-export PATH="$HOME/.poetry/bin:$PATH"
