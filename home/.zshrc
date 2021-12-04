@@ -88,6 +88,8 @@ setopt no_beep
 
 # Aliases
 alias ls='ls -FGh'
+alias kd='kubectl --context gseks-development'
+alias kp='kubectl --context gseks-production'
 
 # Keybindings
 # Default to emacs style, then override as necessary
