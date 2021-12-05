@@ -1,8 +1,8 @@
 [user]
 	name = Ronny Haryanto
 	email = ronny@haryan.to
-	#signingkey = 72701F1041D8433D
-	signingkey = 41D8433D
+	signingkey = 72701F1041D8433D
+  #signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIAGrXCXn7Z9D7jH/pWK29JHolHjdPvp8rdl9qpTp4ai
 [color]
 	diff = auto
 	status = auto
@@ -45,6 +45,7 @@
 	smudge = git-lfs smudge -- %f
 [gpg]
 	program = /opt/homebrew/bin/gpg
+  #format = ssh
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
@@ -58,3 +59,5 @@
 #   diffFilter = delta --color-only
 [init]
 	defaultBranch = main
+[gpg "ssh"]
+	allowedSignersFile = /Users/ronny/.config/git/allowed_signers
