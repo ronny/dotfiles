@@ -36,7 +36,7 @@
 	smudge = git media smudge %f
 [commit]
 	template = /Users/ronny/.stCommitMsg
-	gpgsign = false
+	gpgsign = true
 	#gpgsign = false
 [filter "lfs"]
 	process = git-lfs filter-process
