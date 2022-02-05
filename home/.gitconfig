@@ -36,7 +36,7 @@
 	smudge = git media smudge %f
 [commit]
 	template = /Users/ronny/.stCommitMsg
-	gpgsign = true
+	gpgsign = false
 	#gpgsign = false
 [filter "lfs"]
 	process = git-lfs filter-process
@@ -44,7 +44,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [gpg]
-	program = gpg
+  program = gpg
   #format = ssh
 [gpg "ssh"]
 	allowedSignersFile = /Users/ronny/.config/git/allowed_signers
