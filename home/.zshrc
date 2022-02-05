@@ -127,9 +127,9 @@ load-nvmrc() {
 # eval "$(kubectl completion zsh)"
 # eval "$(helm completion zsh)"
 
-# if [[ -x /opt/homebrew/bin/aws_completer ]]; then
+# if [[ -x $(brew --prefix)/bin/aws_completer ]]; then
 #   # echo "Sourcing awscli completion..."
-#   complete -C '/opt/homebrew/bin/aws_completer' aws
+#   complete -C '$(brew --prefix)/bin/aws_completer' aws
 # fi
 
 # if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
@@ -137,13 +137,13 @@ load-nvmrc() {
 #   source ~/.iterm2_shell_integration.zsh
 # fi
 
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
-# if [[ -x /opt/homebrew/bin/pipenv ]]; then
+# if [[ -x $(brew --prefix)/bin/pipenv ]]; then
   # eval "$(pipenv --completion)"
 # fi
 
-if [[ -x /opt/homebrew/bin/starship ]]; then
+if [[ -x "$HOMEBREW_PREFIX/bin/starship" ]]; then
  eval "$(starship init zsh)"
 fi
 

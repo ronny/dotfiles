@@ -8,7 +8,6 @@ fi
 # User specific environment and startup programs
 
 export LANG="en_AU.UTF-8"
-export PATH="/opt/homebrew/bin:/usr/local/sbin:$PATH:$HOME/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export PAGER=less
 export LESS="$LESS -C -S -R"
@@ -17,9 +16,10 @@ export EDITOR="vim"
 export BROWSER="w3m"
 export LSCOLORS="Exfxcxdxbxegedabagacad"
 export COLORFGBG="default;default"
+export PATH="$HOMEBREW_PREFIX/bin:/usr/local/sbin:$PATH:$HOME/bin"
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+if [ -f "$HOMEBREW_PREFIX/etc/bash_completion" ]; then
+    . "$HOMEBREW_PREFIX/etc/bash_completion"
 fi
 
 # Try loading rbenv first, then rvm.

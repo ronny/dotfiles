@@ -74,11 +74,11 @@ export ARCHFLAGS="-arch x86_64"
 
 # Python
 # export VIRTUALENV_USE_DISTRIBUTE=true
-# if [[ -x /opt/homebrew/bin/python ]]; then
-#   export VIRTUALENVWRAPPER_PYTHON="/opt/homebrew/bin/python"
+# if [[ -x $(brew --prefix)/bin/python ]]; then
+#   export VIRTUALENVWRAPPER_PYTHON="$(brew --prefix)/bin/python"
 # else
 #   py27=`which python2.7`
-#   echo "WARNING: using ${py27} as VIRTUALENVWRAPPER_PYTHON because /opt/homebrew/bin/python is unavailable"
+#   echo "WARNING: using ${py27} as VIRTUALENVWRAPPER_PYTHON because $(brew --prefix)/bin/python is unavailable"
 #   export VIRTUALENVWRAPPER_PYTHON=${py27}
 # fi
 # export WORKON_HOME="$HOME/.virtualenvs"
@@ -95,7 +95,11 @@ export ARCHFLAGS="-arch x86_64"
 export GPG_TTY=$(tty)
 
 # Load homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -d /usr/local/bin/brew ]]
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 
-eval "$(pyenv init --path)"
+# eval "$(pyenv init --path)"
 
