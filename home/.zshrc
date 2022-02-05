@@ -143,7 +143,7 @@ load-nvmrc() {
   # eval "$(pipenv --completion)"
 # fi
 
-if [[ -x "/opt/homebrew/bin/starship" -o -x "/usr/local/bin/starship" ]]; then
+if [[ -x "/opt/homebrew/bin/starship" || -x "/usr/local/bin/starship" ]]; then
  eval "$(starship init zsh)"
 fi
 
