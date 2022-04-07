@@ -22,7 +22,7 @@
 	tool = kdiff3
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -44,7 +44,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [gpg]
-  program = gpg
+  program = /opt/homebrew/bin/gpg
   #format = ssh
 [gpg "ssh"]
 	allowedSignersFile = /Users/ronny/.config/git/allowed_signers
