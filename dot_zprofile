@@ -42,9 +42,13 @@ export LESS='-C -S -R'
 
 export GOPATH="$HOME/go"
 export GOPRIVATE="github.com/iflix,github.com/iflix-letsplay"
+export VOLTA_HOME="$HOME/.volta"
+export BUN_INSTALL="/Users/ronny/.bun"
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $VOLTA_HOME/bin
+  $BUN_INSTALL/bin
   /usr/local/{bin,sbin}
   $path
   $HOME/bin
@@ -102,4 +106,3 @@ elif [[ -x /usr/local/bin/brew ]]; then
 fi
 
 # eval "$(pyenv init --path)"
-

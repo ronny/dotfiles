@@ -1,0 +1,1 @@
+def objectvalues: [ keys[] as $k | .[$k] ];

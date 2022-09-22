@@ -160,14 +160,6 @@ fi
 # Uncomment to print out the result of profiling (typically start up only; see also the top of this file)
 # zprof
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
-# bun completions
-[ -s "/Users/ronny/.bun/_bun" ] && source "/Users/ronny/.bun/_bun"
-
-# Bun
-export BUN_INSTALL="/Users/ronny/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # BEGIN_AWS_SSO_CLI
 
@@ -211,5 +203,7 @@ compdef __aws_sso_profile_complete aws-sso-profile
 complete -C /opt/homebrew/bin/aws-sso aws-sso
 
 # END_AWS_SSO_CLI
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun completions
+[ -s "/Users/ronny/.bun/_bun" ] && source "/Users/ronny/.bun/_bun"
+

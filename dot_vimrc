@@ -154,8 +154,8 @@ else
   map  <Leader>t :CtrlPMixed<CR>
   map  <Leader>r :FufBufferTag<CR>
 endif
-nmap <Leader>n  <plug>NERDTreeTabsToggle<CR> 
-nmap <Leader>nr <plug>NERDTreeFind<CR> 
+nmap <Leader>n  <plug>NERDTreeTabsToggle<CR>
+nmap <Leader>nr <plug>NERDTreeFind<CR>
 nmap <Leader>b :TagbarToggle<CR>
 map <Leader>gg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 nmap <PageUp> <C-b>

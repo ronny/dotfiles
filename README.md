@@ -1,7 +1,16 @@
-Dotfiles
---------
+# Ronny's dotfiles
 
-My personal configurations and preferences for various applications.
+My personal configuration files and preferences for various applications.
 
-Compatible with [homesick](https://github.com/technicalpickles/homesick).
-Install homesick, then do `homesick clone git@github.com:ronny/dotfiles`.
+Managed by [chezmoi].
+
+## Using on a new machine
+
+https://www.chezmoi.io/quick-start/#using-chezmoi-across-multiple-machines
+
+## zsh
+
+Use [zgenom] to load prezto
+
+[chezmoi]: https://www.chezmoi.io
+[zgenom]: https://github.com/jandamm/zgenom
