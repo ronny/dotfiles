@@ -30,6 +30,7 @@
 	default = simple
 [diff]
 	algorithm = patience
+	external = difft
 [filter "media"]
 	required = true
 	clean = git media clean %f

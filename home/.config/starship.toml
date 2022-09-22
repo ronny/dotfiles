@@ -29,6 +29,8 @@ format = """\
   $character\
 """
 
+# Timeout for commands executed by starship (in milliseconds).
+command_timeout = 1_000
 
 # Replace the "❯" symbol in the prompt with "»"
 [character]      # The name of the module we are configuring is "character"
@@ -39,7 +41,7 @@ vicmd_symbol = "[«](bold green)"
 
 # Disable the package module, hiding it from the prompt completely
 [aws]
-disabled = true
+disabled = false
 
 [directory]
 fish_style_pwd_dir_length = 1
@@ -75,3 +77,6 @@ disabled = true
 
 [nodejs]
 symbol = "Node "
+
+[sudo]
+disabled = false
