@@ -1,5 +1,5 @@
 age
-chezmoi
+*.boltdb
 configstore
 gatsby
 gh
