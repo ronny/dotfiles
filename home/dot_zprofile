@@ -98,6 +98,9 @@ export ARCHFLAGS="-arch x86_64"
 # https://stackoverflow.com/a/42265848/273156
 export GPG_TTY=$(tty)
 
+# https://github.com/FiloSottile/mkcert#using-the-root-with-nodejs
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
 # Load homebrew
 if [[ -x /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
