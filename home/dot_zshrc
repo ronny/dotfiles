@@ -149,7 +149,7 @@ fi
   # eval "$(pipenv --completion)"
 # fi
 
-if [[ -x "/opt/homebrew/bin/starship" || -x "/usr/local/bin/starship" ]]; then
+if [[ -x "/opt/homebrew/bin/starship" || -x "/usr/local/bin/starship" || -x "/snap/bin/starship" ]]; then
  eval "$(starship init zsh)"
 fi
 
