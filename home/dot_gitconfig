@@ -14,7 +14,7 @@
 	st = status -sb
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	safecrlf = false
   pager = less
@@ -30,7 +30,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [commit]
-	template = $HOME/.stCommitMsg
+	template = ~/.stCommitMsg
 	gpgsign = true
 	#gpgsign = false
 [filter "lfs"]
@@ -42,7 +42,7 @@
   program = /opt/homebrew/bin/gpg
   #format = ssh
 [gpg "ssh"]
-	allowedSignersFile = $HOME/.config/git/allowed_signers
+	allowedSignersFile = ~/.config/git/allowed_signers
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
