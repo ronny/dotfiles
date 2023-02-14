@@ -41,9 +41,9 @@ export LESS='-C -S -R'
 # )
 
 export GOPATH="$HOME/go"
-export GOPRIVATE="github.com/iflix,github.com/iflix-letsplay"
+export GOPRIVATE="github.com/quorbit"
 export VOLTA_HOME="$HOME/.volta"
-export BUN_INSTALL="/Users/ronny/.bun"
+export BUN_INSTALL="$HOME/.bun"
 
 # Set the list of directories that Zsh searches for programs.
 path=(
@@ -107,5 +107,10 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
 elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
+
+if [[ -d "/opt/homebrew/Caskroom/google-cloud-sdk" ]]; then
+  source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+fi
+
 
 # eval "$(pyenv init --path)"

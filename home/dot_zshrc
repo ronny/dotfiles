@@ -205,5 +205,5 @@ complete -C /opt/homebrew/bin/aws-sso aws-sso
 # END_AWS_SSO_CLI
 
 # bun completions
-[ -s "/Users/ronny/.bun/_bun" ] && source "/Users/ronny/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 

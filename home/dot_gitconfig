@@ -14,18 +14,12 @@
 	st = status -sb
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = /Users/ronny/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	autocrlf = input
 	safecrlf = false
   pager = less
 [merge]
 	tool = kdiff3
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
 	default = simple
 [diff]
@@ -36,7 +30,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [commit]
-	template = /Users/ronny/.stCommitMsg
+	template = $HOME/.stCommitMsg
 	gpgsign = true
 	#gpgsign = false
 [filter "lfs"]
@@ -48,7 +42,7 @@
   program = /opt/homebrew/bin/gpg
   #format = ssh
 [gpg "ssh"]
-	allowedSignersFile = /Users/ronny/.config/git/allowed_signers
+	allowedSignersFile = $HOME/.config/git/allowed_signers
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
