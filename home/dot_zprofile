@@ -53,10 +53,8 @@ path=(
   $path
   $HOME/bin
   $GOPATH/bin
-  $HOME/.krew/bin
+  /usr/local/go/bin
   $HOME/.cargo/bin
-  $HOME/.poetry/bin
-  $HOME/.local/bin    # pipsi
 )
 
 
