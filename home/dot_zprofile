@@ -95,6 +95,10 @@ export ARCHFLAGS="-arch x86_64"
 # https://stackoverflow.com/a/42265848/273156
 export GPG_TTY=$(tty)
 
+if [[ -e "${HOME}/.colima/default/docker.sock" ]]; then
+  export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+fi
+
 # https://github.com/FiloSottile/mkcert#using-the-root-with-nodejs
 #export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
