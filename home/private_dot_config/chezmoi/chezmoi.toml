@@ -1,0 +1,6 @@
+umask = 0o022
+
+[diff]
+  command = "difft"
+  args = ["--color", "always", "--missing-as-empty", "--skip-unchanged"]
+  pager = "cat"
