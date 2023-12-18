@@ -14,10 +14,11 @@
 	st = status -sb
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
 	autocrlf = input
 	safecrlf = false
   pager = less
+	hooksPath = ~/.config/git/hooks
 [merge]
 	tool = kdiff3
 [push]
