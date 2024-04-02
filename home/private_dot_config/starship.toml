@@ -69,6 +69,10 @@ symbol = "Go "
 # style = "bold cyan"
 style = "cyan"
 
+[bun]
+symbol = "Bun "
+style = "bold red"
+
 [git_status]
 style = "bold bright-yellow"
 modified = "✯"
@@ -81,6 +85,7 @@ disabled = true
 
 [nodejs]
 symbol = "Node "
+detect_files = ['package.json', '.node-version', '!bunfig.toml', '!bun.lockb']
 
 [sudo]
 disabled = false
