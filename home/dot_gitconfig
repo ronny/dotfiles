@@ -57,3 +57,6 @@
 
 [includeIf "hasconfig:remote.*.url:git@github.com:quorbit/**"]
   path = ~/.gitconfig-quorbit
+[diff "lockb"]
+	textconv = bun
+	binary = true
