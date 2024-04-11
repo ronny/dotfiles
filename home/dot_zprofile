@@ -113,5 +113,6 @@ if [[ -d "/opt/homebrew/Caskroom/google-cloud-sdk" ]]; then
   source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 fi
 
+source "${HOME}/.orbstack/shell/init.zsh" 2>/dev/null || :
 
 # eval "$(pyenv init --path)"

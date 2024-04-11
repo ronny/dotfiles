@@ -1,4 +1,7 @@
-# Don't print a new line at the start of the prompt
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
 add_newline = true
 
 format = """\
@@ -13,6 +16,7 @@ format = """\
   $golang\
   $java\
   $nodejs\
+  $bun\
   $python\
   $rust\
   $kubernetes\
@@ -37,7 +41,7 @@ command_timeout = 1_000
 # symbol = "»"     # The "symbol" segment is being set to "»"
 success_symbol = "[»](bold green)"
 error_symbol = "[»](bold red)"
-vicmd_symbol = "[«](bold green)"
+# vicmd_symbol = "[«](bold green)"
 
 # Disable the package module, hiding it from the prompt completely
 [aws]
@@ -65,6 +69,10 @@ symbol = "Go "
 # style = "bold cyan"
 style = "cyan"
 
+[bun]
+symbol = "Bun "
+style = "bold red"
+
 [git_status]
 style = "bold bright-yellow"
 modified = "✯"
@@ -77,6 +85,7 @@ disabled = true
 
 [nodejs]
 symbol = "Node "
+detect_files = ['package.json', '.node-version', '!bunfig.toml', '!bun.lockb']
 
 [sudo]
 disabled = false
