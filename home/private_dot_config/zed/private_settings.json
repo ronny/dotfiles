@@ -1,0 +1,51 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "buffer_font_family": "Operator Mono",
+  "buffer_font_size": 13,
+  "buffer_font_features": {
+    "liga": true
+  },
+  "show_copilot_suggestions": false,
+  "show_whitespaces": "selection",
+  "show_wrap_guides": true,
+  "theme": "Gruvbox Dark Soft",
+  "vim_mode": true,
+  "wrap_guides": [80, 120],
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "tab_size": 2,
+  "hard_tabs": false,
+  "language_overrides": {
+    "Make": {
+      "hard_tabs": true,
+      "tab_size": 4
+    },
+    "Go": {
+      "hard_tabs": true
+    }
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": false
+  },
+  "terminal": {
+    "shell": "system",
+    "blinking": "on",
+    "font_family": "OperatorMono Nerd Font",
+    "font_size": 13,
+    "font_features": {
+      "liga": true
+    }
+  },
+  "experimental.theme_overrides": {
+    // match highlighting, including bracket matching - the default is too low contrast
+    "editor.document_highlight.read_background": "#88808099"
+  }
+}
