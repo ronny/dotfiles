@@ -61,5 +61,8 @@
 
   "tabs": {
     "git_status": true
+  },
+  "preview_tabs": {
+    "enabled": false
   }
 }
