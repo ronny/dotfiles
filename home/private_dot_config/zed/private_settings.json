@@ -8,11 +8,20 @@
 // from the command palette or from `Zed` application menu.
 {
   "buffer_font_family": "Operator Mono",
-  "buffer_font_size": 13,
+  "buffer_font_size": 12,
   "buffer_font_features": {
+    "calt": true,
     "liga": true
   },
+  "buffer_line_height": "standard",
+
+  "ui_font_size": 13,
+
   "show_copilot_suggestions": false,
+  "features": {
+    "copilot": false
+  },
+
   "show_whitespaces": "selection",
   "show_wrap_guides": true,
   "theme": "Gruvbox Dark Soft",
@@ -39,13 +48,18 @@
     "shell": "system",
     "blinking": "on",
     "font_family": "OperatorMono Nerd Font",
-    "font_size": 13,
+    "font_size": 12,
     "font_features": {
       "liga": true
-    }
+    },
+    "line_height": "standard"
   },
   "experimental.theme_overrides": {
     // match highlighting, including bracket matching - the default is too low contrast
     "editor.document_highlight.read_background": "#88808099"
+  },
+
+  "tabs": {
+    "git_status": true
   }
 }
