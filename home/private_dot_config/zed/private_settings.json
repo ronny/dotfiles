@@ -26,6 +26,7 @@
   "show_wrap_guides": true,
   "theme": "Gruvbox Dark Soft",
   "vim_mode": true,
+  "soft_wrap": "none",
   "wrap_guides": [80, 120],
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
