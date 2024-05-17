@@ -81,7 +81,7 @@ unsetopt CORRECT
 # compinit
 #autoload -Uz +X compinit && compinit
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do 
+for dump in ~/.zcompdump(N.mh+24); do
   compinit
 done
 compinit -C
@@ -100,66 +100,19 @@ alias kpre='kubectl --context preprod'
 alias kp='kubectl --context prod'
 alias kpus='kubectl --context prod-us'
 
+if [[ -x "/opt/homebrew/bin/nvim" || -x "/usr/local/bin/nvim" ]]; then
+  alias vi='nvim'
+fi
+
 # Keybindings
 # Default to emacs style, then override as necessary
 bindkey -e
 bindkey "^F" history-beginning-search-backward
 bindkey "^G" history-beginning-search-forward
 
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm; --no-use makes it fast
-
-  # Auto load nvm after cd
-  # place this after nvm initialization!
-  autoload -U add-zsh-hook
-  load-nvmrc() {
-    local node_version="$(nvm version)"
-    local nvmrc_path="$(nvm_find_nvmrc)"
-
-    if [ -n "$nvmrc_path" ]; then
-      local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-      if [ "$nvmrc_node_version" = "N/A" ]; then
-        nvm install
-      elif [ "$nvmrc_node_version" != "$node_version" ]; then
-        nvm use
-      fi
-    elif [ "$node_version" != "$(nvm version default)" ]; then
-      echo "Reverting to nvm default version"
-      nvm use default
-    fi
-  }
-  # add-zsh-hook chpwd load-nvmrc
-  # load-nvmrc
-fi
-
-# . "$(brew --prefix asdf)/libexec/asdf.sh"
-# . "$(brew --prefix asdf)/share/zsh/site-functions/_asdf"
-
-# eval "$(kubectl completion zsh)"
-# eval "$(helm completion zsh)"
-
-# if [[ -x $(brew --prefix)/bin/aws_completer ]]; then
-#   # echo "Sourcing awscli completion..."
-#   complete -C '$(brew --prefix)/bin/aws_completer' aws
-# fi
-
-# if [[ -e ~/.iterm2_shell_integration.zsh ]]; then
-#   # echo "Sourcing iterm2 shell integration..."
-#   source ~/.iterm2_shell_integration.zsh
-# fi
-
-# eval "$(pyenv init -)"
-
-# if [[ -x $(brew --prefix)/bin/pipenv ]]; then
-  # eval "$(pipenv --completion)"
-# fi
-
 if [[ -x "/opt/homebrew/bin/starship" || -x "/usr/local/bin/starship" || -x "/snap/bin/starship" ]]; then
  eval "$(starship init zsh)"
 fi
-
 
 # Use zgenom to load prezto, don't load prezto directly
 # source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
