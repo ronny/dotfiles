@@ -3,12 +3,13 @@ local mux = wezterm.mux
 
 local config = wezterm.config_builder()
 
-config.initial_cols = 224
-config.initial_rows = 93
+config.initial_cols = 252
+config.initial_rows = 105
 
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.80
 config.macos_window_background_blur = 15
 config.colors = {
+  background = "#222222",
   ansi = {
     "#000000",
     "#ec392c",
