@@ -64,7 +64,7 @@ Bundle 'ronny/vim-json'
 "Bundle 'ronny/scss-snippets.vim'
 
 " Colour scheme
-Bundle 'ronny/birds-of-paradise.vim'
+"Bundle 'ronny/birds-of-paradise.vim'
 
 filetype plugin indent on
 
@@ -102,7 +102,7 @@ let g:clojure_align_multiline_strings = 1
 " Colour schemes
 
 set background=dark
-colorscheme birds-of-paradise
+"colorscheme birds-of-paradise
 
 " 'Transparent' gutter background
 highlight clear SignColumn

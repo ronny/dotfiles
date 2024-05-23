@@ -6,10 +6,24 @@ local config = wezterm.config_builder()
 config.initial_cols = 252
 config.initial_rows = 105
 
-config.window_background_opacity = 0.80
+-- doesn't work 🤷‍♂️
+config.default_cursor_style = 'BlinkingBlock'
+config.cursor_blink_rate = 800 -- ms
+--config.force_reverse_video_cursor = true
+
+config.window_background_opacity = 0.75
 config.macos_window_background_blur = 15
 config.colors = {
   background = "#222222",
+
+  cursor_bg = '#e3871c',
+  cursor_fg = 'black',
+  cursor_border = '#e3871c',
+  compose_cursor = '#52ad70',
+
+  selection_bg = "#9b608f",
+  selection_fg = "black",
+
   ansi = {
     "#000000",
     "#ec392c",
@@ -179,7 +193,7 @@ wezterm.on('update-status', function(window, pane)
       hostname = wezterm.hostname()
     end
 
-    table.insert(cells, cwd)
+    --table.insert(cells, cwd)
     table.insert(cells, hostname)
   end
 
@@ -190,7 +204,7 @@ wezterm.on('update-status', function(window, pane)
   -- An entry for each battery (typically 0 or 1 battery)
   for _, b in ipairs(wezterm.battery_info()) do
     if tostring(b.state_of_charge) ~= "nan" then
-      table.insert(cells, string.format('%.0f%%', b.state_of_charge * 100))
+      table.insert(cells, string.format('%s %.0f%%', wezterm.nerdfont.md_battery, b.state_of_charge * 100))
     end
   end
 
