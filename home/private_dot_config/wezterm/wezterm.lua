@@ -62,6 +62,11 @@ config.keys = {
   { mods = 'SUPER',       key = 'd', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
   { mods = 'SUPER|SHIFT', key = 'D', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
   { mods = 'ALT',         key = 'l', action = wezterm.action.ShowLauncher },
+
+  -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+  {key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb"}},
+  -- Make Option-Right equivalent to Alt-f; forward-word
+  {key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"}},
 }
 
 wezterm.on('gui-startup', function()
