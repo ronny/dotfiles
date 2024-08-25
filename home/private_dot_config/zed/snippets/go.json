@@ -1,0 +1,25 @@
+{
+  "table driven test": {
+    "prefix": "tdt",
+    "body": [
+      "func Test$1(t *testing.T) {",
+      "\tt.Parallel()",
+      "\ttestCases := []struct {",
+      "\t\tdesc\tstring",
+      "\t\t$2",
+      "\t}{",
+      "\t\t{",
+      "\t\t\tdesc: \"$3\",",
+      "\t\t\t$4",
+      "\t\t},",
+      "\t}",
+      "\tfor i, tc := range testCases {",
+      "\t\tt.Run(fmt.Sprintf(\"%d: %s\", i, tc.desc), func(t *testing.T) {",
+      "\t\t\t\t$0",
+      "\t\t})",
+      "\t}",
+      "}"
+    ],
+    "description": "Snippet for table driven test"
+  }
+}

@@ -9,6 +9,7 @@
 {
   "buffer_font_family": "Operator Mono",
   "buffer_font_size": 12,
+  "buffer_font_weight": 400,
   "buffer_font_features": {
     "calt": true,
     "liga": true
@@ -42,7 +43,7 @@
     }
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_type_hints": false
   },
   "terminal": {
