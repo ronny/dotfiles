@@ -136,3 +136,4 @@ if [[ -x "/opt/homebrew/share/google-cloud-sdk" ]]; then
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
+eval "$(direnv hook zsh)"
