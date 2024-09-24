@@ -21,5 +21,13 @@
       "}"
     ],
     "description": "Snippet for table driven test"
+  },
+  "ctx in test": {
+    "prefix": "tctx",
+    "body": [
+      "ctx := context.Background()",
+      "ctx, cancel := context.WithCancel(ctx)",
+      "t.Cleanup(cancel)"
+    ]
   }
 }

@@ -12,7 +12,9 @@
       "ctrl-8": ["workspace::ActivatePane", 7],
       "ctrl-9": ["workspace::ActivatePane", 8],
       "cmd-shift-o": "project_symbols::Toggle",
-      "cmd-t": "file_finder::Toggle"
+      "cmd-t": "file_finder::Toggle",
+      "alt-t": "task::Rerun",
+      "alt-shift-t": "task::Spawn"
     }
   },
   {

@@ -25,7 +25,6 @@
 
   "show_whitespaces": "selection",
   "show_wrap_guides": true,
-  "theme": "Gruvbox Dark Soft",
   "vim_mode": true,
   "soft_wrap": "none",
   "wrap_guides": [80, 120],
@@ -56,13 +55,16 @@
     },
     "line_height": "standard"
   },
+  "theme": "Gruvbox Dark Hard",
   "experimental.theme_overrides": {
     // match highlighting, including bracket matching - the default is too low contrast
-    "editor.document_highlight.read_background": "#88808099"
+    "editor.document_highlight.read_background": "#88808099",
+    "editor.active_line.background": "#028d4c66"
   },
 
   "tabs": {
-    "git_status": true
+    "git_status": true,
+    "file_icons": true
   },
   "preview_tabs": {
     "enabled": false
