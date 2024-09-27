@@ -5,5 +5,5 @@ disable_stdin=true
 
 [whitelist]
 prefix = [
-  "/Users/ronny/projects",
+  "{{ .chezmoi.homeDir }}/projects",
 ]
