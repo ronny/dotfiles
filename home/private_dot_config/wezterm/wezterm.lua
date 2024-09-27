@@ -11,10 +11,10 @@ config.default_cursor_style = 'BlinkingBlock'
 config.cursor_blink_rate = 800 -- ms
 --config.force_reverse_video_cursor = true
 
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.80
 config.macos_window_background_blur = 15
 config.colors = {
-  background = "#222222",
+  background = "#111111",
 
   cursor_bg = '#e3871c',
   cursor_fg = 'black',
