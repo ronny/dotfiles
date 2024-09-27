@@ -127,7 +127,9 @@ if [[ -x "/opt/homebrew/share/google-cloud-sdk" ]]; then
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
-eval "$(direnv hook zsh)"
+if [[ -x "/opt/homebrew/bin/direnv" ]]; then
+  eval "$(direnv hook zsh)"
+fi
 
 # Use zgenom to load prezto, don't load prezto directly
 # source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
