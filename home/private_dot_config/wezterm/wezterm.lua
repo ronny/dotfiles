@@ -6,9 +6,10 @@ local config = wezterm.config_builder()
 config.initial_cols = 252
 config.initial_rows = 105
 
--- doesn't work 🤷‍♂️
 config.default_cursor_style = 'BlinkingBlock'
-config.cursor_blink_rate = 800 -- ms
+config.cursor_blink_rate = 380 -- ms
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
 --config.force_reverse_video_cursor = true
 
 config.window_background_opacity = 0.80
@@ -56,17 +57,24 @@ config.font_size = 12
 config.line_height = 1.15
 -- config.cell_width = 1.05
 
-config.cursor_blink_rate = 0
 
 config.keys = {
   { mods = 'SUPER',       key = 'd', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
   { mods = 'SUPER|SHIFT', key = 'D', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
   { mods = 'ALT',         key = 'l', action = wezterm.action.ShowLauncher },
+  {
+    mods = 'SUPER',
+    key = 'k',
+    action = wezterm.action.Multiple {
+      wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+      wezterm.action.SendKey { key = 'L', mods = 'CTRL' },
+    },
+  },
 
   -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
-  {key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb"}},
+  { key = "LeftArrow",  mods = "OPT", action = wezterm.action { SendString = "\x1bb" } },
   -- Make Option-Right equivalent to Alt-f; forward-word
-  {key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"}},
+  { key = "RightArrow", mods = "OPT", action = wezterm.action { SendString = "\x1bf" } },
 }
 
 wezterm.on('gui-startup', function()
