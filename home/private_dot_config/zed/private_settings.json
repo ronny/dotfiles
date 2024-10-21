@@ -23,6 +23,7 @@
     "copilot": false
   },
 
+  "use_autoclose": false,
   "show_whitespaces": "selection",
   "show_wrap_guides": true,
   "vim_mode": true,

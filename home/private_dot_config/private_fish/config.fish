@@ -8,14 +8,14 @@ end
 # Paths are done in a single place here so we can see everything
 # because the order matters and we don't want any nasty suprises.
 
-if test -d ~/bin
-  fish_add_path --append ~/bin
+if test -d "$HOME/bin"
+  fish_add_path --append "$HOME/bin"
 end
-if test -d ~/go/bin
-  fish_add_path --append ~/go/bin
+if test -d "$HOME/go/bin"
+  fish_add_path --append "$HOME/go/bin"
 end
-if test -d ~/zig
-  for f in ~/zig/*
+if test -d "$HOME/zig"
+  for f in $HOME/zig/*
     if test -d "$f"
       fish_add_path --append "$f"
     end
@@ -28,8 +28,8 @@ if test -x /opt/homebrew/bin/brew
   /opt/homebrew/bin/brew shellenv | source
 end
 
-if test -e ~/.asdf/asdf.fish
-  source ~/.asdf/asdf.fish
+if test -e "$HOME/.asdf/asdf.fish"
+  source "$HOME/.asdf/asdf.fish"
 end
 
 if command -q direnv
