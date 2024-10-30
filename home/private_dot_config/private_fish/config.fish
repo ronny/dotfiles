@@ -2,6 +2,10 @@ if status is-interactive
   # Commands to run in interactive sessions can go here
 
   set -U fish_greeting ""
+
+  if command -q atuin
+    atuin init fish --disable-up-arrow | source
+  end
 end
 
 #####################################################################
